@@ -2,11 +2,11 @@ local function do_keyboard_robot()
     local keyboard = {}
     keyboard.inline_keyboard = {
 		{
-    					{text = 'Share Robot Contact 🤖🤘🏾', callback_data = '!share'},
+    					{text = 'Share My Contact 🤖🤘🏾', callback_data = '!share'},
     					},
     					{
     		    		{text = 'Buy Group 💸', callback_data = '!buygroup'},
-    		    		{text = 'Support 👥', url = 'https://telegram.me/joinchat/BvytAD9KL7J2PE2u0ek3ZA'},
+    		    		{text = 'Support Intelligent 👥', url = 'https://telegram.me/joinchat/DakeQj7vR3XOOR3r5CLgAw'},
 	    },
 	    {
 	    {text = '🔙', callback_data = '!home'}
@@ -18,8 +18,8 @@ local function do_keyboard_buygroup()
     local keyboard = {}
     keyboard.inline_keyboard = {
 {
-    		    		{text = 'Iranians', url = 'http://salam.im/buy/ecgvlup3ld'},
-    		    		{text = 'Other countries', url = 'https://telegram.me/joinchat/BvytAD9KL7J2PE2u0ek3ZA'},
+    		    		{text = 'Iranians', url = 'https://telegram.me/joinchat/DakeQj7vR3XOOR3r5CLgAw'},
+    		    		{text = 'Other countries', url = 'https://telegram.me/joinchat/DakeQj7vR3XOOR3r5CLgAw'},
 	    },
 	    {
 	    {text = '🔙', callback_data = '!robot'}
@@ -31,17 +31,17 @@ local function do_keyboard_private()
     local keyboard = {}
     keyboard.inline_keyboard = {
     	{
-    		{text = '🌐 Site', url = 'http://beatbot.ir'},
-    		{text = '📡 Channels', callback_data = '!channel'},
+    		{text = '🌐 Site', url = 'http://allwen.ir'},
+    		{text = '📡 Groups', callback_data = '!channel'},
 	    },
 		{
-	        {text = '📥 Contact Us 📤', callback_data = '/chat'},
+	        {text = 'Chat 📲', callback_data = '/chat'},
         },
 		{
 	        {text = 'About Us 👥', callback_data = '!aboutus'},
         },
 	    {
-	        {text = '🔸BeatBotTG🔹', callback_data = '!robot'},
+	        {text = 'About Bots🔹', callback_data = '!robot'},
         }
     }
     return keyboard
@@ -60,14 +60,14 @@ local function do_keyboard_channel()
     local keyboard = {}
     keyboard.inline_keyboard = {
     	{
-    		{text = 'Persian Channel 🇮🇷', url = 'https://telegram.me/BeatBot_team'},
+    		{text = 'Join!', url = 'https://telegram.me/joinchat/DakeQj7vR3XOOR3r5CLgAw'},
 	    },
 	{
-	        		{text = 'English Channel 🇬🇧', url = 'https://telegram.me/BeatBotTeam'},
+	        		{text = 'Join!', url = 'https://telegram.me/joinchat/DakeQj7vR3XOOR3r5CLgAw'},
 
     },
 		{
-					{text = 'News Channel 🗣', url = 'https://telegram.me/BeatBot_News'},
+					{text = 'Join!', url = 'https://telegram.me/joinchat/DakeQj7vR3XOOR3r5CLgAw'},
 		},
 		{
 	    {text = '🔙', callback_data = '!home'},
@@ -82,7 +82,7 @@ local action = function(msg, blocks, ln)
         db:hset('bot:users', msg.from.id, 'xx')
         db:hincrby('bot:general', 'users', 1)
         if msg.chat.type == 'private' then
-            local message = [[📍 *Welcome BeatBotTeam Official Bot*  📍
+            local message = [[📍 *Welcome Allwen Official Bot*  📍
 -------------------------------------------------------------
 🗣 `Please select an option ...`]]
             local keyboard = do_keyboard_private()
@@ -104,7 +104,7 @@ local action = function(msg, blocks, ln)
         api.editMessageText(msg.chat.id, msg_id, text, keyboard, true)
 end
 if query == 'robot' then
-            local text = [[🔸*BeatBotTG*🔹
+            local text = [[🔸*Intelligent*🔹
 🚩 _An advanced robot for entertainment group manager and anti-spam_]]
             local keyboard = do_keyboard_robot()
         api.editMessageText(msg.chat.id, msg_id, text, keyboard, true)
@@ -116,14 +116,14 @@ _We will be call to you_]]
         api.editMessageText(msg.chat.id, msg_id, text, keyboard, true)
 end
 if query == 'home' then
-            local text = [[📍 *Welcome BeatBotTeam Official Bot*  📍
+            local text = [[📍 *Welcome Allwen Official Bot*  📍
 -------------------------------------------------------------
 🗣 `Please select an option ...`]]
             local keyboard = do_keyboard_private()
         api.editMessageText(msg.chat.id, msg_id, text, keyboard, true)
 end
         if query == 'share' then
-     api.sendContact(msg.from.id, '+639380063518', '🔸ßελτ ßΘτ🔹 [ Use ! ]')
+     api.sendContact(msg.from.id, '+989380386206', 'Allwen')
 end
     end
 
