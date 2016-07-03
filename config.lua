@@ -1,10 +1,10 @@
 return {
-	bot_api_key = '',
-	admin = 94746365, 
-	channel = '@BeatBot_Team', --channel username with the '@'
+	bot_api_key = '253512760:AAHT2uvDU6zx83z0-18dT0i9mzqJkRzKGXk',
+	admin = 229187138, 
+	channel = '@PluginsShop', --channel username with the '@'
 
 	plugins = {
-		'start.lua','aboutus.lua','contactus.lua',
+		'start.lua','aboutme.lua','contactus.lua',
 	},
 	api_errors = {
 		[101] = 'Not enough rights to kick participant', --SUPERGROUP: bot is not admin
